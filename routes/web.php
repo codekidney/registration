@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', 'Auth\RegisterController@showRegistrationForm');
 
 Auth::routes();
-
+Route::get('/', 'HomeController@index');
+//Route::get('/', 'Auth\RegisterController@showRegistrationForm');
 Route::get('home', 'UserController@show')->name('home');
 Route::get('user', 'UserController@show')->name('user_profile');
 Route::get('edit', 'UserController@edit')->name('user_edit');
